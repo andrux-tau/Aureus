@@ -1,0 +1,203 @@
+<!DOCTYPE html> <!-- → Le dice al navegador que este documento es HTML5 -->
+<html lang="es"> <!-- → Define que el idioma principal del contenido es español -->
+
+<head> <!-- → Inicio de la cabecera del documento -->
+  <meta charset="UTF-8"> <!-- → Configura el tipo de caracteres para aceptar acentos y ñ -->
+  <title>AUREUS</title> <!-- → Título que se mostrará en la pestaña del navegador -->
+  <style> /*→ Aquí va el CSS (estilos visuales) embebido dentro del HTML 
+
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8f9fa; } 
+    /* → Estilos para el cuerpo: sin margen, fuente Arial y fondo gris claro */
+
+    header { background: #00695c; padding: 15px; color: white; } 
+    /* → Cabecera con fondo verde, espacio interno y texto blanco */
+
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; } 
+    /* → Estilos para los enlaces del menú: blancos, separados, sin subrayado y en negrita */
+
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; } 
+    /* → Contenedor general centrado con ancho máximo de 1000px */
+
+    h2 { color: #00695c; } 
+    /* → Los títulos <h2> tendrán color verde */
+
+    .hero { background: white; padding: 20px; border-radius: 8px; margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; } 
+    /* → Sección principal con fondo blanco, bordes redondeados y elementos en fila flexible */
+
+    .hero img { width: 300px; max-width: 100%; border-radius: 8px; } 
+    /* → Imagen dentro del hero con tamaño máximo 300px y bordes redondeados */
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; } 
+    /* → Grid de tarjetas: se ajustan automáticamente con mínimo 220px y espacio entre ellas */
+
+    .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); } 
+    /* → Cada tarjeta tiene fondo blanco, sombra y bordes redondeados */
+
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; } 
+    /* → Grid para los productos de la tienda */
+
+    .product { background: white; padding: 10px; border-radius: 6px; text-align: center; } 
+    /* → Caja de producto centrada con borde redondeado */
+
+    .btn { background: #00695c; color: white; padding: 8px 12px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 8px; } 
+    /* → Estilo para botones (realmente son enlaces con forma de botón) */
+
+    .chat, .videos, .tabla { background: white; padding: 15px; border-radius: 8px; margin-top: 20px; } 
+    /* → Estilo para secciones de chat, videos y tabla */
+
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; } 
+    /* → La tabla ocupará todo el ancho y sin espacios entre bordes */
+
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; } 
+    /* → Estilo para celdas y encabezados de tabla */
+
+    th { background: #00695c; color: white; } 
+    /* → Los encabezados de tabla tendrán fondo verde y texto blanco */
+
+    textarea { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; } 
+    /* → Estilo del cuadro de texto grande del chat */
+
+    footer { margin-top: 30px; text-align: center; color: #666; padding: 15px; } 
+    /* → Pie de página con texto gris centrado */
+
+  </style>
+</head> <!-- → Fin de la cabecera -->
+
+<body> <!-- → Inicio del cuerpo de la página -->
+
+  <!-- CABECERA -->
+  <header> <!-- → Cabecera del sitio -->
+    <div class="container"> <!-- → Contenedor centrado -->
+      <h1>Proyect_Aureus</h1> <!-- → Título principal -->
+      <nav> <!-- → Menú de navegación -->
+        <a href="#inicio">Inicio</a> <!-- → Enlace que lleva a la sección inicio -->
+        <a href="#metodologia">Metodología</a> <!-- → Enlace que lleva a la sección metodología -->
+        <a href="#tienda">Tienda</a> <!-- → Enlace que lleva a la sección tienda -->
+        <a href="#tabla">Horarios</a> <!-- → Enlace que lleva a la sección tabla -->
+        <a href="#videos">Videos</a> <!-- → Enlace que lleva a la sección videos -->
+        <a href="#coach">Coach</a> <!-- → Enlace que lleva a la sección coach -->
+        <a href="login.html">Login</a> <!-- → Enlace que lleva a otra página login.html -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container"> <!-- → Contenido principal de la página -->
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero"> <!-- → Sección de bienvenida -->
+      <div style="flex:1;"> <!-- → Div flexible para texto -->
+        <h2>Bienvenido a Proyect_Aureus</h2> <!-- → Título secundario -->
+        <p>Un espacio para mejorar tu mente y tu cuerpo con rutinas físicas y actividades mentales.</p> <!-- → Texto descriptivo -->
+        <a href="#coach" class="btn">Hablar con tu coach</a> <!-- → Botón que lleva al coach -->
+      </div>
+      <div> <!-- → Div que contiene la imagen -->
+        <img src="img/votiva.jpg" alt="Imagen motivacional"> <!-- → Imagen motivacional -->
+      </div>
+    </section>
+
+    <!-- Sección Metodología -->
+    <section id="metodologia" class="card-grid"> <!-- → Sección con tarjetas -->
+      <div class="card"> <!-- → Tarjeta 1 -->
+        <h3>Metodología</h3>
+        <p>Entrenamiento personalizado con seguimiento semanal y consejos prácticos.</p>
+      </div>
+      <div class="card"> <!-- → Tarjeta 2 -->
+        <h3>Actividades Físicas</h3>
+        <p>Rutinas adaptadas según tu nivel: principiante, intermedio o avanzado.</p>
+      </div>
+      <div class="card"> <!-- → Tarjeta 3 -->
+        <h3>Actividades Mentales</h3>
+        <p>Consejos, guías y ejercicios de motivación.</p>
+      </div>
+    </section>
+
+    <!-- Tienda -->
+    <section id="tienda"> <!-- → Sección de tienda -->
+      <h2>Tienda</h2>
+      <div class="product-grid"> <!-- → Grid de productos -->
+        <div class="product"> <!-- → Producto 1 -->
+          <img src="img/deportiva.jpg" alt="Camiseta" width="150"> <!-- → Imagen del producto -->
+          <h4>Camiseta deportiva</h4> <!-- → Nombre del producto -->
+          <p>$29.900</p> <!-- → Precio -->
+          <a href="#" class="btn">Agregar</a> <!-- → Botón (no funcional aún) -->
+        </div>
+        <div class="product"> <!-- → Producto 2 -->
+          <img src="img/proteina.png" alt="Proteína" width="150">
+          <h4>Proteína Whey</h4>
+          <p>$120.000</p>
+          <a href="#" class="btn">Agregar</a>
+        </div>
+        <div class="product"> <!-- → Producto 3 -->
+          <img src="img/bandaelas.jpg" alt="Bandas" width="150">
+          <h4>Bandas elásticas</h4>
+          <p>$50.000</p>
+          <a href="#" class="btn">Agregar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLA DE HORARIOS -->
+    <section id="tabla" class="tabla"> <!-- → Sección con tabla -->
+      <h2>Horarios de Entrenamiento</h2>
+      <table> <!-- → Tabla -->
+        <tr> <!-- → Fila de encabezados -->
+          <th>Día</th> <!-- → Encabezado columna Día -->
+          <th>Hora</th> <!-- → Encabezado columna Hora -->
+          <th>Actividad</th> <!-- → Encabezado columna Actividad -->
+          <th>Coach</th> <!-- → Encabezado columna Coach -->
+        </tr>
+        <tr> <!-- → Fila 1 -->
+          <td>Lunes</td>
+          <td>7:00 AM</td>
+          <td>Cardio</td>
+          <td>Juan Pérez</td>
+        </tr>
+        <tr> <!-- → Fila 2 -->
+          <td>Miércoles</td>
+          <td>6:00 PM</td>
+          <td>Fuerza</td>
+          <td>María Gómez</td>
+        </tr>
+        <tr> <!-- → Fila 3 -->
+          <td>Viernes</td>
+          <td>5:00 PM</td>
+          <td>Yoga</td>
+          <td>Ana López</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="videos"> <!-- → Sección de videos -->
+      <h2>Videos de Rutinas</h2>
+      <p>Ejemplos de entrenamientos que puedes seguir:</p>
+
+      <!-- Video local -->
+      <video width="400" controls> <!-- → Etiqueta de video con controles -->
+        <source src="video/trote.mp4" type="video/mp4"> <!-- → Fuente del video -->
+        Tu navegador no soporta este formato de video. <!-- → Texto alternativo si no carga -->
+      </video>
+
+      <!-- Video de YouTube -->
+      <iframe width="400" height="225" src="https://www.youtube.com/embed/UBMk30rjy0o" 
+        title="Rutina de entrenamiento" frameborder="0" allowfullscreen>
+      </iframe>
+      <!-- → Inserta un video de YouTube -->
+    </section>
+
+    <!-- Chat (simulado) -->
+    <section id="coach" class="chat"> <!-- → Sección de coach virtual -->
+      <h2>Coach Virtual</h2>
+      <p>Prototipo de chat (todavía no funciona, solo maqueta).</p>
+      <textarea rows="3" placeholder="Escribe tu pregunta..."></textarea><br> <!-- → Área de texto -->
+      <a href="#" class="btn">Enviar</a> <!-- → Botón enviar (decorativo) -->
+    </section>
+
+  </main>
+
+  <footer> <!-- → Pie de página -->
+    <p>&copy; Proyect_Aureus</p> <!-- → Texto © -->
+  </footer>
+
+</body> <!-- → Fin del cuerpo -->
+</html> <!-- → Fin del documento HTML -->
