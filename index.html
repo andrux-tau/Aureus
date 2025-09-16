@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="es"> 
 
 <head> 
@@ -7,8 +7,7 @@
   <title>Aureus</title> 
 
   <style> 
-
-    body { margin: 0; font-family: Arial, sans-serif; background: #f8f9fa; } 
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #f8f9fa, #e6f2f1); } 
     header { background: #00695c; padding: 15px; color: white; } 
     nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; } 
     .container { width: 92%; max-width: 1100px; margin: 0 auto; padding: 18px 0; } 
@@ -23,16 +22,16 @@
     table { width:100%; border-collapse:collapse; margin-top:8px; } 
     th, td { border:1px solid #ddd; padding:10px; text-align:center; } 
     th { background:#00695c; color:white; } 
-    .videos { display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; } 
+    .videos { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:18px; margin-top:14px; } 
+    .videos video, .videos iframe { width:100%; height:220px; border-radius:8px; } 
     .chat { margin-top:18px; background:white; padding:12px; border-radius:8px; } 
-    .btn { display:inline-block; background:#00695c; color:white; padding:8px 12px; border-radius:8px; text-decoration:none; margin-top:8px; font-weight:600; } /* → Botón visual */
+    .btn { display:inline-block; background:#00695c; color:white; padding:8px 12px; border-radius:8px; text-decoration:none; margin-top:8px; font-weight:600; } 
     footer { text-align:center; color:#666; margin-top:22px; padding:14px 0; } 
 
     @media (max-width:720px) { 
       .hero { flex-direction:column; text-align:center; }
-      .videos iframe, .videos video { width:100% !important; height:auto !important; }
+      .videos video, .videos iframe { height:auto !important; }
     }
-
   </style> 
 </head> 
 
@@ -40,7 +39,7 @@
 
   <header> 
     <div class="container"> 
-      <h1 style="margin:0; display:inline-block;">Proyecto Aureus</h1> 
+      <h1 style="margin:0; display:inline-block;">Aureus</h1> 
       <nav style="float:right;"> 
         <a href="#inicio">Inicio</a> 
         <a href="#metodologia">Metodología</a> 
@@ -58,7 +57,7 @@
 
     <section id="inicio" class="hero"> 
       <div style="flex:1;"> 
-        <h2>Bienvenido a Proyecto Aureus</h2> 
+        <h2>Aureus</h2> 
         <p>Rutinas y acompañamiento para mejorar tu condición física y mental.</p> 
         <a href="#coach" class="btn">Hablar con tu coach</a> 
       </div>
@@ -83,7 +82,7 @@
     </section>
 
     <section id="tienda"> 
-      <h2>Tienda</h2> >
+      <h2>Tienda</h2>
       <div class="product-grid"> 
         <div class="product">
           <img src="img/deportiva.png" alt="Camiseta"> 
@@ -139,18 +138,19 @@
     </section>
 
     <section id="videos" class="videos"> 
-      <h2>Videos de Rutinas</h2> 
-      <p>Ejemplos de entrenamientos que puedes seguir:</p> 
+      <h2>Videos de Rutinas <h3>
+        Ejemplos de entrenamientos que puedes seguir:
+        </h3>
+        <h4>Analiza cada video y busca el que mejor se acople a ti</h4>
+      </h2>
 
-      <video width="400" autoplay loop controls> 
+      <video controls> 
         <source src="video/trote.mp4" type="video/mp4"> 
         Tu navegador no soporta este formato de video. 
       </video>
 
-      <iframe width="400" height="225" src="https://www.youtube.com/embed/UBMk30rjy0o"
-        title="Rutina de entrenamiento" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen> 
+      <iframe src="https://www.youtube.com/embed/UBMk30rjy0o"
+        title="Rutina de entrenamiento" frameborder="0" allowfullscreen>
       </iframe>
     </section>
 
@@ -165,9 +165,9 @@
 
   <footer> 
     <div class="container"> 
-      <p>&copy; 2025 Proyect_Aureus</p> 
+      <p>&copy; 2025 Aureus</p> 
     </div>
   </footer>
 
 </body> 
-</html> 
+</html>
