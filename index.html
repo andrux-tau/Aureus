@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Aureus</title> 
+
+  <style> 
+
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8f9fa; } 
+    header { background: #00695c; padding: 15px; color: white; } 
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; } 
+    .container { width: 92%; max-width: 1100px; margin: 0 auto; padding: 18px 0; } 
+    .hero { display:flex; gap:18px; align-items:center; background:white; padding:20px; border-radius:10px; margin-top:18px; } 
+    .hero img { width:320px; max-width:40vw; border-radius:8px; } 
+    .card-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px; } 
+    .card { background:white; padding:14px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.05); } 
+    .product-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:14px; } 
+    .product { background:white; padding:10px; border-radius:8px; text-align:center; } 
+    .product img { width:120px; height:120px; object-fit:cover; border-radius:8px; } 
+    .tabla { margin-top:18px; background:white; padding:14px; border-radius:8px; } 
+    table { width:100%; border-collapse:collapse; margin-top:8px; } 
+    th, td { border:1px solid #ddd; padding:10px; text-align:center; } 
+    th { background:#00695c; color:white; } 
+    .videos { display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; } 
+    .chat { margin-top:18px; background:white; padding:12px; border-radius:8px; } 
+    .btn { display:inline-block; background:#00695c; color:white; padding:8px 12px; border-radius:8px; text-decoration:none; margin-top:8px; font-weight:600; } /* → Botón visual */
+    footer { text-align:center; color:#666; margin-top:22px; padding:14px 0; } 
+
+    @media (max-width:720px) { 
+      .hero { flex-direction:column; text-align:center; }
+      .videos iframe, .videos video { width:100% !important; height:auto !important; }
+    }
+
+  </style> 
+</head> 
+
+<body> 
+
+  <header> 
+    <div class="container"> 
+      <h1 style="margin:0; display:inline-block;">Proyecto Aureus</h1> 
+      <nav style="float:right;"> 
+        <a href="#inicio">Inicio</a> 
+        <a href="#metodologia">Metodología</a> 
+        <a href="#tienda">Tienda</a>
+        <a href="#tabla">Horarios</a> 
+        <a href="#videos">Videos</a> 
+        <a href="#coach">Coach</a> 
+        <a href="login.html">Login</a> 
+      </nav>
+      <div style="clear:both;"></div> 
+    </div>
+  </header>
+
+  <main class="container"> 
+
+    <section id="inicio" class="hero"> 
+      <div style="flex:1;"> 
+        <h2>Bienvenido a Proyecto Aureus</h2> 
+        <p>Rutinas y acompañamiento para mejorar tu condición física y mental.</p> 
+        <a href="#coach" class="btn">Hablar con tu coach</a> 
+      </div>
+      <div> 
+        <img src="img/motiva.png" alt="Imagen motivacional"> 
+      </div>
+    </section>
+
+    <section id="metodologia" class="card-grid"> 
+      <div class="card">
+        <h3>Metodología</h3>
+        <p>Planificación semanal, objetivos por mes y seguimiento.</p> 
+      </div>
+      <div class="card">
+        <h3>Actividades Físicas</h3>
+        <p>Cardio, fuerza, flexibilidad y sesiones interactivas.</p>
+      </div>
+      <div class="card">
+        <h3>Actividades Mentales</h3>
+        <p>Técnicas de concentración, respiración y hábitos.</p>
+      </div>
+    </section>
+
+    <section id="tienda"> 
+      <h2>Tienda</h2> >
+      <div class="product-grid"> 
+        <div class="product">
+          <img src="img/deportiva.png" alt="Camiseta"> 
+          <h4>Camiseta deportiva</h4> 
+          <p>$29.900</p> 
+          <a href="#" class="btn">Agregar</a> 
+        </div>
+
+        <div class="product">
+          <img src="img/proteina.png" alt="Proteína"> 
+          <h4>Proteína Whey 1kg</h4>
+          <p>$120.000</p>
+          <a href="#" class="btn">Agregar</a>
+        </div>
+
+        <div class="product">
+          <img src="img/bandaelas.png" alt="Bandas"> 
+          <h4>Bandas elásticas</h4>
+          <p>$50.000</p>
+          <a href="#" class="btn">Agregar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tabla" class="tabla"> 
+      <h2>Horarios de Entrenamiento</h2> 
+      <table> 
+        <tr> 
+          <th>Día</th> 
+          <th>Hora</th> 
+          <th>Actividad</th> 
+          <th>Coach</th> 
+        </tr>
+        <tr> 
+          <td>Lunes</td> 
+          <td>7:00 AM</td> 
+          <td>Cardio</td> 
+          <td>Bochoni Bedoya</td> 
+        </tr>
+        <tr>
+          <td>Miércoles</td>
+          <td>6:00 PM</td>
+          <td>Fuerza</td>
+          <td>María Gómez</td>
+        </tr>
+        <tr> 
+          <td>Viernes</td>
+          <td>5:00 PM</td>
+          <td>Yoga</td>
+          <td>Ana López</td>
+        </tr>
+      </table> 
+    </section>
+
+    <section id="videos" class="videos"> 
+      <h2>Videos de Rutinas</h2> 
+      <p>Ejemplos de entrenamientos que puedes seguir:</p> 
+
+      <video width="400" autoplay loop controls> 
+        <source src="video/trote.mp4" type="video/mp4"> 
+        Tu navegador no soporta este formato de video. 
+      </video>
+
+      <iframe width="400" height="225" src="https://www.youtube.com/embed/UBMk30rjy0o"
+        title="Rutina de entrenamiento" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen> 
+      </iframe>
+    </section>
+
+    <section id="coach" class="chat"> 
+      <h2>Coach Virtual (prototipo)</h2>
+      <p>Por ahora es maqueta: este textarea y botón simulan un chat que luego conectaremos a IA.</p>
+      <textarea rows="3" placeholder="Escribe tu pregunta sobre entrenamiento o nutrición..."></textarea><br> 
+      <a href="#" class="btn">Enviar</a> 
+    </section>
+
+  </main>
+
+  <footer> 
+    <div class="container"> 
+      <p>&copy; 2025 Proyect_Aureus</p> 
+    </div>
+  </footer>
+
+</body> 
+</html> 

@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Login - Proyect_Aureus</title> 
+  <style> 
+    body { margin:0; font-family: Arial, sans-serif; background: #f8f9fa; } 
+    .login-box { width: 350px; margin: 100px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); } 
+    
+    h2 { text-align: center; color: #00695c; } 
+    label { display:block; margin-top:10px; font-weight:bold; } 
+    input { width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:6px; } 
+    .btn { background:#00695c; color:white; padding:10px; border:none; border-radius:6px; width:100%; margin-top:15px; cursor:pointer; } 
+   
+    .btn:hover { background:#004d40; } 
+    .back { display:block; text-align:center; margin-top:15px; } 
+  </style>
+</head>
+
+<body> 
+  <div class="login-box"> 
+    <h2>Iniciar Sesión</h2> 
+    <form> 
+      <label for="usuario">Usuario:</label> 
+      <input type="text" id="usuario" placeholder="Ingresa tu usuario"> 
+
+      <label for="correo">Correo:</label> 
+      <input type="email" id="correo" placeholder="ejemplo@email.com"> 
+
+      <label for="password">Contraseña:</label> 
+      <input type="password" id="password" placeholder="••••••"> 
+
+      <button type="submit" class="btn">Ingresar</button> 
+    </form>
+    <a href="index.html" class="back">Volver al inicio</a> 
+  </div>
+</body>
+</html>
